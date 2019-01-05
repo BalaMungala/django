@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+{%load staticfiles%}
+<html>
+<button type="button">SEND</button>
+<button type="button">Turn on camera</button>
+<textarea rows="4" cols="50"></textarea>
+<textarea rows="4" cols="100"></textarea>
+<textarea rows="4" cols="100"></textarea>
+<textarea rows="4" cols="100"></textarea>
+
+<video width="320" height="240" controls>
+  <source src="{%static "videos/Babu Rambabu - Kevvu Keka.mp4"%}" type="video/mp4"><br>
+
+</video>
+
+<h1>
+The date and time is:{{date}}
+<h2>
+
+{%if employees%}
+{%for emp in employees%}
+{{emp.eno}}
+{{emp.ename}}
+{{emp.esal}}
+{{emp.eadr}}
+{%endfor%}
+{%else%}
+no employee records found
+{%endif%}
+
+</html>
